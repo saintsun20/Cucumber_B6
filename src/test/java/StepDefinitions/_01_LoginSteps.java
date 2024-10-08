@@ -7,6 +7,11 @@ package StepDefinitions;
 import Pages.DialogContent;
 import Utilities.GWD;
 import io.cucumber.java.en.*; // * hepsini kapsıyor
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import java.time.Duration;
 
 public class _01_LoginSteps {
     DialogContent dc = new DialogContent();
@@ -30,8 +35,6 @@ public class _01_LoginSteps {
         dc.mySendKeys(dc.username,"turkeyts");
         dc.mySendKeys(dc.password,"TechnoStudy123");
         dc.myClick(dc.loginButton);
-
-
     }
 
     @Then("User should login successfully")
@@ -39,5 +42,11 @@ public class _01_LoginSteps {
 
         System.out.println("Siteye girildiği doğrulandı");
 
+//        WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(5));
+//        wait.until(ExpectedConditions.textToBePresentInElement(dc.headText, "Internship"));
+
+//        Assert.assertTrue(dc.headText.getText().equals("Internship"));
+
+        dc.verifyContainsText(dc.headText,"Internship");
     }
 }
