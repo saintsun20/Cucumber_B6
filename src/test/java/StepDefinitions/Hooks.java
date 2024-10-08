@@ -9,6 +9,7 @@ public class Hooks { // Kanca
     // Annotation
     @After
     public void after(){
+
         GWD.quitDriver();
     }
 }
