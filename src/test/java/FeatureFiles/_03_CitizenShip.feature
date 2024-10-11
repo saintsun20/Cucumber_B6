@@ -1,10 +1,10 @@
-Feature: Country Functionality
+Feature: CitizenShip Functionality
 
-  Scenario: Create a country
+  Scenario: Create a citizenShip
 
     Given Navigate to Campus
     When Enter username and password and click login button
     Then User should login successfully
-    And Navigate to Country
-    When Create a country
+    And Navigate to CitizenShip
+    When Create a CitizenShip
     Then Success message should be displayed

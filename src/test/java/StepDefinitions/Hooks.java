@@ -3,13 +3,15 @@ package StepDefinitions;
 import Utilities.GWD;
 import io.cucumber.java.After;
 
-public class Hooks { // Kanca
+public class Hooks {   //Kanca
 
-    // Cucumber e ait her senaryodan sonra çalışan
+
+    // Cucumbera ait her senaryodan sonra çalışan
     // Annotation
     @After
-    public void after(){
-
+    public void after()
+    {
         GWD.quitDriver();
     }
+
 }

@@ -5,13 +5,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class GWD { // Genel Web Driver
+public class GWD {  // Genel Web Driver
     private static WebDriver driver;
 
     public static WebDriver getDriver()
     {
-        if(driver == null) {// hiç oluşturulmamış ise
-
+        if (driver == null) //hiç oluşturulmamış ise
+        {
             driver = new ChromeDriver();
             driver.manage().window().maximize();
             driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
@@ -23,17 +23,17 @@ public class GWD { // Genel Web Driver
 
     public static void quitDriver(){
 
-        // test sonucu ekranı bir miktar beklesin diye
+        //test sonucu ekranı bir miktar beklesin diye
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
 
-        if (driver != null){
-
+        if (driver != null)
+        {
             driver.quit();
-            driver = null;
+            driver=null;
         }
     }
 }
