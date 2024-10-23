@@ -9,8 +9,8 @@ import org.apache.commons.lang3.RandomStringUtils;
 
 
 public class _02_CountrySteps {
-    LeftNav ln=new LeftNav();
-    DialogContent dc=new DialogContent();
+    LeftNav ln = new LeftNav();
+    DialogContent dc = new DialogContent();
 
     @And("Navigate to Country")
     public void navigateToCountry() {
@@ -21,8 +21,8 @@ public class _02_CountrySteps {
 
     @When("Create a country")
     public void createACountry() {
-        String ulkeAdi= RandomStringUtils.randomAlphanumeric(8); // 8 tane karışık harf
-        String ulkeKodu= RandomStringUtils.randomNumeric(4); // 4 tane karşık rakam
+        String ulkeAdi = RandomStringUtils.randomAlphanumeric(8); // 8 tane karışık harf
+        String ulkeKodu = RandomStringUtils.randomNumeric(4); // 4 tane karşık rakam
 
         dc.myClick(dc.addButton);
         dc.mySendKeys(dc.nameInput,ulkeAdi);

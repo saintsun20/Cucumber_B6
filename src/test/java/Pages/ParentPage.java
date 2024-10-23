@@ -27,7 +27,7 @@ public class ParentPage {
     }
 
     public void scrolltoElement(WebElement element) {
-        JavascriptExecutor js=(JavascriptExecutor) GWD.getDriver();
+        JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
         js.executeScript("arguments[0].scrollIntoView();", element);
     }
 
@@ -43,7 +43,18 @@ public class ParentPage {
 
         //List<WebElement> MesajKutusuElementleri=
         wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath("//hot-toast-container/div/div/div//*"),0));
-        // ukarıdaki elemanlar en az 1 den fazla olana kadar yani MESAJ kutusu gözükene kadar bekle
+
+        ////hot-toast-container/div/div/div/*
+        //
+        //yukarıdaki locator //hot-toast-container/div/div/div
+        //içindeki çocuklar demektir.
+        //
+        ////hot-toast-container/div/div/div//*
+        //
+        //yukarıdaki locator //hot-toast-container/div/div/div
+        //içindeki çocuklar+torunlar yani Tüm çocuklar demektir.
+
+        // Yukarıdaki elemanlar en az 1 den fazla olana kadar yani MESAJ kutusu gözükene kadar bekle
 
 //        System.out.println("MesajKutusuElementleri.size() = " + MesajKutusuElementleri.size());
 //        for(WebElement e : MesajKutusuElementleri)
@@ -51,7 +62,7 @@ public class ParentPage {
 
 
         // WebElement MesajKutusuParent1=GWD.getDriver().findElement(By.xpath("//hot-toast-container/div/div/div"));
-        WebElement MesajKutusuParent2=GWD.getDriver().findElement(By.tagName("mat-panel-description"));  //mat-expansion-panel-header
+        WebElement MesajKutusuParent2 = GWD.getDriver().findElement(By.tagName("mat-panel-description"));  //mat-expansion-panel-header
 //
 //        System.out.println("MesajKutusuParent2.getText() = " + MesajKutusuParent2.getText()); // Ekranda gözüken text
 //        System.out.println("MesajKutusuParent2.getAccessibleName() = " + MesajKutusuParent2.getAccessibleName()); // Ekrandan ulaşıbilen her bilgisi, sana html den veriyor
