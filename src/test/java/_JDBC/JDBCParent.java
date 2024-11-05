@@ -9,7 +9,7 @@ public class JDBCParent {
     private static Connection connection;
     public static Statement statement;
 
-    public static void DBConnectionOpen() throws SQLException {
+    public static void DBConnectionOpen() {
 
         String url = "jdbc:mysql://demo.mersys.io:33906/sakila";
         String username = "admin";
