@@ -7,11 +7,10 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import java.util.List;
-/*
+
 public class _17_JDBCSteps {
 
-    DialogContent dc = new DialogContent();
-
+    DialogContent dc= new DialogContent();
     @Then("Send the Query the Database {string} and control match")
     public void sendTheQueryTheDatabaseAndControlMatch(String sorgu) {
 
@@ -35,7 +34,6 @@ public class _17_JDBCSteps {
             Assert.assertEquals(dbList.get(i).get(0),
                     UIList.get(i).getText().trim(),
                     "Eşleştirme yapılamadı");
-
     }
 }
-*/
+
