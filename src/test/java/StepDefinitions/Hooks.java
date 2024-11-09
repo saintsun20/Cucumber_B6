@@ -4,6 +4,8 @@ import Utilities.ExcelUtility;
 import Utilities.GWD;
 import io.cucumber.java.After;
 import io.cucumber.java.Scenario;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
 public class Hooks {   //Kanca
 
@@ -21,7 +23,7 @@ public class Hooks {   //Kanca
         // aşağıdaki bölüm sadece extend report plugini devrede ise açılır
 //        if (senaryo.isFailed()){
 //            TakesScreenshot ts=((TakesScreenshot) GWD.getDriver());
-//            byte[] hafizadakiHali=ts.getScreenshotAs(OutputType.BYTES);
+//           byte[] hafizadakiHali=ts.getScreenshotAs(OutputType.BYTES);
 //            senaryo.attach(hafizadakiHali, "image/png", "screenshot name");
 //        }
 
