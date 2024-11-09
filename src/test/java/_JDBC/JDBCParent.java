@@ -10,9 +10,9 @@ public class JDBCParent {
     public static Statement statement;
 
     public static void DBConnectionOpen() {
-        String url = "jdbc:mysql://demo.mersys.io:33906/sakila";
-        String username = "admin";
-        String password = "Techno24Study.%=";
+        String url = "jdbc:mysql://demo.mersys.io:33906/employees";
+        String username = "student";
+        String password = "DEkzTd3#pzPm";
 
         try {
             connection = DriverManager.getConnection(url, username, password);

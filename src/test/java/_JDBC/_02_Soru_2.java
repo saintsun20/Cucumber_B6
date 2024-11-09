@@ -1,6 +1,7 @@
 package _JDBC;
 
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 
 public class _02_Soru_2 extends JDBCParent{
@@ -8,10 +9,23 @@ public class _02_Soru_2 extends JDBCParent{
     public static void main(String[] args) throws SQLException {
         DBConnectionOpen();
 
-        ResultSet sonuc = statement.executeQuery("select * from city");
+        ResultSet rs = statement.executeQuery("select * from employees");
+        ResultSetMetaData rsmd=rs.getMetaData();
 
-        while (sonuc.next())
-            System.out.println(sonuc.getString("city"));
+        int kolonSayisi= rsmd.getColumnCount();
+        System.out.println("kolonSayisi = " + kolonSayisi);
+
+        for (int i = 1; i <= kolonSayisi; i++) {
+            System.out.println(rsmd.getColumnName(i)+" "+rsmd.getColumnTypeName(i));
+        }
+
+        rs.next();
+        for (int i = 1; i <= kolonSayisi; i++) {
+            System.out.println(i+".kolon="+rs.getString(i));
+        }
+
+        while (rs.next())
+            System.out.println(rs.getString("emp_no"));
 
         DBConnectionClose();
     }
